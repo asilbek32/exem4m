@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+
+        .side-bar {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(-100%);
+        }
+
+        #check:checked~.side-bar {
+            transform: translateX(0);
+        }
+
+        .git-nation {
+            box-shadow: 0px 1px 4px 0px #0000001F;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="check" class="hidden">
+    <div class="side-bar absolute top-0 left-0 w-full h-full bg-white px-5 py-2.5  z-50">
+        <label for="check" class="block mb-6 text-2xl cursor-pointer">✖️</label>
+
+        <div class="flex flex-col gap-5">
+            <a href="#" class="text-base font-medium text-[#323A56]">Asosiy</a>
+
+            <div class="flex items-center gap-1">
+                <a href="#" class="text-base font-medium text-[#323A56]">Kurslarimiz</a>
+                <img src="./images/fi_chevron-down.png" alt="">
+            </div>
+
+            <a href="#" class="text-base font-medium text-[#323A56]">Blog</a>
+            <a href="#" class="text-base font-medium text-[#323A56]">Biz haqimizda</a>
+            <a href="#" class="text-base font-medium text-[#323A56]">Bog’lanish</a>
+
+            <select name="lan" id="lan" class="outline-none border border-[#EFF2F7] rounded px-2 py-1">
+                <option value="">EN</option>
+                <option value="">UZ</option>
+                <option value="">RU</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="container mx-auto max-w-[1440px]">
+        <div class="bg-[#F8FAFC] mb-[80px]">
+            <div
+                class="flex md:hidden justify-between px-[20px] max-[320px]:px-[10px] h-[70px] items-center shadow-sm bg-[#FFFFFF]">
+                <label for="check"><img src="./images/fi_menu.png" alt=""></label>
+                <img src="./icons/logo.svg" alt="">
+                <img src="./images/user_image.jpg" alt="" class="w-[44px] h-[44px] object-cover rounded-[50%]">
+            </div>
+
+            <nav
+                class="md:flex hidden justify-between h-[86px] md:px-[40px] lg:px-[75px] xl:px-[100px] items-center shadow-sm bg-[#FFFFFF]">
+                <img src="./icons/logod.svg" alt="">
+                <div class="flex items-center gap-x-[30px]">
+                    <a href="#">Asosiy</a>
+                    <div class="flex items-center gap-x-[4px]">
+                        <a href="#" class="text-base font-medium text-[#323A56]">Kurslarimiz</a>
+                        <img src="./images/fi_chevron-down.png" alt="">
+                    </div>
+                    <a href="#" class="text-base font-medium text-[#323A56] hidden lg:block">Blog</a>
+                    <a href="#" class="text-base font-medium text-[#323A56] hidden lg:block">Biz haqimizda</a>
+                    <a href="#" class="text-base font-medium text-[#323A56] ">Bog’lanish</a>
+                    <img src="./icons/fi_search.svg" alt="">
+                    <select name="lan" id="lan"
+                        class="outline-none border-1 border-solid border-[#EFF2F7] rounded-[4px]">
+                        <option value="">EN</option>
+                        <option value="">UZ</option>
+                        <option value="">Ru</option>
+                    </select>
+                    <div
+                        class="flex gap-x-[3px] justify-center bg-[#F8FAFC] items-center w-[114px] h-[44px] border-1 border-solid border-[#EFF2F7] rounded-[8px]">
+                        <button>Kirish</button>
+                        <img src="./icons/u_arrow-right.svg" alt="">
+                    </div>
+                </div>
+            </nav>
+            <main class="px-[20px] mt-[80px] md:px-[40px] lg:px-[75px] xl:px-[100px] ">
+                <h1
+                    class="text-[27px] md:text-[45px] lg:text-[60px] xl:text-[88px] font-semibold tetx-[#323A56] text-center mb-[16px]">
+                    <span class="text-[#1D72D2]">Dasturlashni</span> biz bilan qulay muhitda o‘rganing
+                </h1>
+                <p class="text-[13px] font-normal text-[#8A90A5] text-center mb-[36px]">Khan Academy - bu siz izlagan
+                    akademiya bo’lib, unda siz juda qisqa muddatda istalgan dasturlash sohasida
+                    Junior darajasiga chiqa olasiz! </p>
+                <div
+                    class="w-full h-[56px] flex justify-center items-center gap-x-[10px] rounded-[4px] bg-[#1D72D2] text-[#FFFFFF] mb-[10px]">
+                    <button>Boshlash</button>
+                    <img src="./images/u_arrow-right.png" alt="">
+                </div>
+                <div
+                    class="w-full h-[56px] flex justify-center items-center gap-x-[10px] rounded-[4px] bg-[#EFF2F7] text-[#323A56] mb-[40px]">
+                    <img src="./icons/akar-icons_github-fill.svg" alt="">
+                    <h4>GitHub</h4>
+                </div>
+                <div class="flex justify-center">
+                    <div
+                        class="git-nation flex justify-between items-center gap-x-[10px] w-[260px] h-[80px] px-[30px] py-[20px] bg-[#f6ffee] rounded-[8px] mb-[40px]">
+                        <img src="./images/icon.png" alt="">
+                        <div>
+                            <h5 class="text-[10px] text-[#323A56]">GitNation React Award</h5>
+                            <p class="text-sm font-semibold text-[#70C63B]">Most Impactful Project to the Community</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <section class="px-[20px]">
+            <h2 class="text-[28px] font-bold text-[#323A56] text-center">Kam vaqtda <span class="text-[#1D72D2]">ko‘proq o‘rganish</span></h2>
+            <p>Khan Academy akademiyasida juda qisqa
+                muddatda istalgan dasturlash sohasida
+                Junior darajasiga chiqa olasiz</p>
+            <div class="rounded-[8px] border-1 border-solid border-[#8A90A5]">
+                <img src="./images/image.jpg" alt="" class="rounded-t-[8px] mb-[20px]">
+                <div class="px-[20px] ">
+                    <div class="px-[20px] py-[20px] rounded-[6px] border-1 border-solid border-[#EFF2F7]">
+                        <img src="./images/kitchenimg.jpg" alt="" class="rounded-[6px] mb-3">
+                        <div class="flex gap-x-[6px] text-[#1D72D2] items-center mb-[24px]">
+                            <p class="px-[6px] py-[4px] bg-[#EFF2F7] rounded-[4px]">PLUS</p>
+                            <p>VERIFIED</p>
+                            <p class="w-[4px] h-[4px] rounded-[50%] bg-[#1D72D2]"></p>
+                            <p>CAPE TOWN</p>
+                        </div>
+
+                        <h5 class="text-[20px] text-[#323A56] font-semibold mb-3">Modern, Chic Penthouse</h5>
+                        <p class="text-sm font-semibold text-[#313647]">$119/<span class="font-normal">night</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
